@@ -1,0 +1,22 @@
+{
+  "queryset": {
+    "version": "1.0.0",
+    "dataSources": [
+      {
+        "id": "b75f9bfe-9687-4524-9670-8776a7429aa8",
+        "clusterUri": "",
+        "type": "Fabric",
+        "databaseItemId": "7c776288-112d-8f7a-4045-0a71a358eae6",
+        "databaseItemName": "evh_integration"
+      }
+    ],
+    "tabs": [
+      {
+        "id": "34ab1fbf-d18c-460d-9d0b-eeb3a7b3c61d",
+        "content": "//***********************************************************************************************************\n// Here are two articles to help you get started with KQL:\n// KQL reference guide - https://aka.ms/KQLguide\n// SQL - KQL conversions - https://aka.ms/sqlcheatsheet\n//***********************************************************************************************************\n\n// Use \"take\" to view a sample number of records in the table and check the data.\ntb_integration\n| take 150\n\n// See how many records are in the table.\nYOUR_TABLE_HERE\n| count\n\n// This query returns the number of ingestions per hour in the given table.\nYOUR_TABLE_HERE\n| summarize IngestionCount = count() by bin(ingestion_time(), 1h)\n\n",
+        "title": "Tab",
+        "dataSourceId": "b75f9bfe-9687-4524-9670-8776a7429aa8"
+      }
+    ]
+  }
+}

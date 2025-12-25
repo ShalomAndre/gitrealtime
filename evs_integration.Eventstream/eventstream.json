@@ -1,0 +1,97 @@
+{
+  "sources": [
+    {
+      "id": "6fc86c6b-fc59-4ec1-b9d5-d4cc5964e77a",
+      "name": "Buses",
+      "type": "SampleData",
+      "properties": {
+        "type": "Buses"
+      }
+    }
+  ],
+  "destinations": [
+    {
+      "id": "3ee73c54-d7cb-4af1-b3f7-ccfa87015f02",
+      "name": "Eventhouse",
+      "type": "Eventhouse",
+      "properties": {
+        "dataIngestionMode": "ProcessedIngestion",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "itemId": "7c776288-112d-8f7a-4045-0a71a358eae6",
+        "databaseName": "evh_integration",
+        "tableName": "tb_integration",
+        "inputSerialization": {
+          "type": "Json",
+          "properties": {
+            "encoding": "UTF8"
+          }
+        }
+      },
+      "inputNodes": [
+        {
+          "name": "evsintegration-stream"
+        }
+      ],
+      "inputSchemas": [
+        {
+          "name": "evsintegration-stream",
+          "schema": {
+            "columns": [
+              {
+                "name": "Timestamp",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "TripId",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "BusLine",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "StationNumber",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "ScheduleTime",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "Properties",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "streams": [
+    {
+      "id": "3444615b-319b-4ed8-9237-66e0554d3d63",
+      "name": "evsintegration-stream",
+      "type": "DefaultStream",
+      "properties": {},
+      "inputNodes": [
+        {
+          "name": "Buses"
+        }
+      ]
+    }
+  ],
+  "operators": [],
+  "compatibilityLevel": "1.1"
+}

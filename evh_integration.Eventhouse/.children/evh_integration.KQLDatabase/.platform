@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "KQLDatabase",
+    "displayName": "evh_integration",
+    "description": "evh_integration"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "7c776288-112d-8f7a-4045-0a71a358eae6"
+  }
+}
